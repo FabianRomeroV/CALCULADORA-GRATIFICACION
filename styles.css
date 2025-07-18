@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  flex: 1 1 45%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.reiniciar {
+  background-color: #dc3545;
+}
+
+button.imprimir {
+  background-color: #28a745;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.resultado {
+  margin-top: 20px;
+  background: #e9ffe9;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.marca {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 12px;
+  color: #888;
+}
+
+.input-error {
+  border: 2px solid red !important;
+  background-color: #ffecec;
+}
+
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  .container {
+    box-shadow: none;
+    background: white;
+  }
+  button {
+    display: none !important;
+  }
+  input, select {
+    border: none !important;
+    background: transparent !important;
+    appearance: none;
+    font-size: 16px;
+    color: black;
+    pointer-events: none;
+  }
+  label {
+    display: block;
+  }
+  .marca {
+    color: #000;
+    font-weight: bold;
+  }
+}
